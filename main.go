@@ -24,7 +24,7 @@ func init() {
 func main() {
 	encoded := base64.StdEncoding.EncodeToString([]byte(*msg))
 	if *auth_header {
-		fmt.Println("Authorization: Basic", encoded)
+		fmt.Print("Authorization: Basic ", encoded)
 	} else {
 		fmt.Println(encoded)
 	}
